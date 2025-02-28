@@ -1,0 +1,246 @@
+/* styles/default-html-styles.css */
+
+/* Apply all styles only to elements with the ai-content class */
+.ai-content {
+  line-height: 1.15; /* Standard browser line height */
+  -webkit-text-size-adjust: 100%; /* Prevent iOS text size adjust */
+}
+
+.ai-content body {
+  margin: 0; /* Remove Tailwind's default body margin */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif; /* Default browser font stack */
+  font-size: 16px; /* Standard base font size */
+  line-height: 1.5; /* Reasonable default line height */
+  color: #000; /* Black text */
+}
+
+/* Headings */
+.ai-content h1,
+.ai-content h2,
+.ai-content h3,
+.ai-content h4,
+.ai-content h5,
+.ai-content h6 {
+  margin-top: 0;
+  margin-bottom: 0.5em; /* Space below headings */
+  font-weight: bold;
+  line-height: 1.2; /* Tighter line height for headings */
+}
+
+.ai-content h1 {
+  font-size: 2em; /* 32px at 16px base */
+  margin-top: 0.67em;
+}
+
+.ai-content h2 {
+  font-size: 1.5em; /* 24px */
+  margin-top: 0.83em;
+}
+
+.ai-content h3 {
+  font-size: 1.17em; /* ~18.72px */
+  margin-top: 1em;
+}
+
+.ai-content h4 {
+  font-size: 1em; /* 16px */
+  margin-top: 1.33em;
+}
+
+.ai-content h5 {
+  font-size: 0.83em; /* ~13.28px */
+  margin-top: 1.67em;
+}
+
+.ai-content h6 {
+  font-size: 0.67em; /* ~10.72px */
+  margin-top: 2.33em;
+}
+
+/* Paragraphs */
+.ai-content p {
+  margin-top: 0;
+  margin-bottom: 1em; /* Standard spacing between paragraphs */
+}
+
+/* Links */
+.ai-content a {
+  color: #0000ee; /* Classic blue link */
+  text-decoration: underline;
+}
+
+.ai-content a:visited {
+  color: #551a8b; /* Purple for visited links */
+}
+
+.ai-content a:hover {
+  text-decoration: underline;
+}
+
+.ai-content a:active {
+  color: #ff0000; /* Red for active links */
+}
+
+/* Lists */
+.ai-content ul,
+.ai-content ol {
+  margin-top: 0;
+  margin-bottom: 1em;
+  padding-left: 40px; /* Standard indent for lists */
+}
+
+.ai-content ul {
+  list-style-type: disc; /* Bullets */
+}
+
+.ai-content ol {
+  list-style-type: decimal; /* Numbers */
+}
+
+.ai-content li {
+  margin-bottom: 0.5em; /* Spacing between list items */
+}
+
+.ai-content ul ul,
+.ai-content ol ul {
+  list-style-type: circle; /* Nested unordered lists */
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.ai-content ul ul ul,
+.ai-content ol ul ul {
+  list-style-type: square; /* Deeper nesting */
+}
+
+.ai-content ol ol,
+.ai-content ol ol ol {
+  list-style-type: lower-alpha; /* Nested ordered lists */
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+/* Blockquotes */
+.ai-content blockquote {
+  margin: 0 0 1em 0;
+  padding-left: 1em;
+  border-left: 4px solid #ccc; /* Simple quote style */
+  color: #666; /* Slightly muted text */
+}
+
+/* Preformatted Text */
+.ai-content pre {
+  margin-top: 0;
+  margin-bottom: 1em;
+  padding: 1em;
+  background-color: #f0f0f0; /* Light gray background */
+  font-family: "Courier New", Courier, monospace;
+  white-space: pre-wrap; /* Wrap long lines */
+  overflow-x: auto; /* Horizontal scroll for overflow */
+}
+
+/* Code */
+.ai-content code {
+  font-family: "Courier New", Courier, monospace;
+  background-color: #f0f0f0;
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+}
+
+/* Images */
+.ai-content img {
+  max-width: 100%; /* Responsive images */
+  height: auto;
+  vertical-align: middle; /* Remove bottom gap */
+}
+
+/* Tables */
+.ai-content table {
+  border-collapse: collapse;
+  margin-bottom: 1em;
+  width: 100%; /* Full width by default */
+}
+
+.ai-content th,
+.ai-content td {
+  padding: 0.5em;
+  border: 1px solid #ddd; /* Light gray borders */
+  text-align: left;
+}
+
+.ai-content th {
+  background-color: #f5f5f5; /* Light gray header */
+  font-weight: bold;
+}
+
+.ai-content tr:nth-child(even) {
+  background-color: #fafafa; /* Zebra striping */
+}
+
+/* Horizontal Rule */
+.ai-content hr {
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+}
+
+/* Strong and Emphasis */
+.ai-content strong {
+  font-weight: bold;
+}
+
+.ai-content em {
+  font-style: italic;
+}
+
+/* Forms */
+.ai-content input,
+.ai-content textarea,
+.ai-content select,
+.ai-content button {
+  font-family: inherit; /* Match body font */
+  font-size: 100%; /* Avoid scaling issues */
+  margin: 0; /* Remove weird defaults */
+}
+
+.ai-content button {
+  cursor: pointer;
+  padding: 0.5em 1em;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.ai-content input[type="text"],
+.ai-content input[type="email"],
+.ai-content textarea {
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.ai-content textarea {
+  vertical-align: top;
+  resize: vertical; /* Allow vertical resize only */
+}
+
+/* Misc */
+.ai-content abbr[title] {
+  text-decoration: underline dotted; /* Standard abbr style */
+}
+
+.ai-content mark {
+  background-color: #ff0; /* Yellow highlight */
+  color: #000;
+}
+
+.ai-content small {
+  font-size: 80%; /* Smaller text */
+}
+
+/* Accessibility */
+.ai-content :focus {
+  outline: 2px solid #0000ee; /* Visible focus ring */
+  outline-offset: 2px;
+}

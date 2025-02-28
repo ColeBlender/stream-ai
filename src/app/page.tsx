@@ -4,13 +4,12 @@
 
 import { useState } from "react";
 import { useAIChatStream } from "next-ai-stream/client";
-
 function HomePage() {
   const [inputText, setInputText] = useState("");
 
   const { messages, submitNewMessage, loading } = useAIChatStream({
     apiEndpoint: "/api/chat",
-    systemPrompt: `You are a helpful AI assistant. Be very succinct in your responses because I don't want drop all my cash on tokens.`,
+    systemPrompt: `Format the output in clean HTML with <h1> for the title, <h2> and <h3> for subheadings, <p> for paragraphs, and use <ol>, <ul>, <li> where appropriate—no \`\`\`html prefix or <head> elements.`,
   });
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -34,7 +33,16 @@ function HomePage() {
                   : "bg-slate-900 text-gray-200 mr-auto"
               }`}
             >
-              {message.content as string}
+              {message.role === "user" ? (
+                (message.content as string)
+              ) : (
+                <div
+                  dangerouslySetInnerHTML={{
+                    __html: message.content as string,
+                  }}
+                  className="ai-content"
+                />
+              )}
             </div>
           );
         })}
